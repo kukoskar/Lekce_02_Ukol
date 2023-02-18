@@ -1,88 +1,116 @@
 package com.engeto.examples;
 
+
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Booking {
-    //region Konstruktory
 
-    String rezervacePokoj1;
-    String rezervacePokoj2;
-    String rezervacePokoj3;
-    LocalDate rezervaceOd;
-    LocalDate rezervaceDo;
-    String typeOfVacation;
+        private Room room1, room2, room3;
+        private Guest firstGuest, secondGuest;
+        private List<Guest> listOfBooking = new ArrayList<>();
 
-    public Booking(String rezervacePokoj1) {
-        this.rezervacePokoj1 = rezervacePokoj1;
-    }
+        private LocalDate bookingFrom;
+        private LocalDate bookingUntil;
+        private String typeOfVacation;
 
-    public Booking(LocalDate rezervaceOd) {
-        this.rezervaceOd = rezervaceOd;
-    }
+        public Booking(Room room1, Guest firstGuest, LocalDate bookingFrom, LocalDate bookingUntil, String typeOfVacation) {
+                this.room1 = room1;
+                this.firstGuest = firstGuest;
+                this.bookingFrom = bookingFrom;
+                this.bookingUntil = bookingUntil;
+                this.typeOfVacation = typeOfVacation;
+        }
 
-    public Booking(String rezervacePokoj1, String rezervacePokoj2, String rezervacePokoj3, LocalDate rezervaceOd, LocalDate rezervaceDo, String typeOfVacation) {
-        this.rezervacePokoj1 = rezervacePokoj1;
-        this.rezervacePokoj2 = rezervacePokoj2;
-        this.rezervacePokoj3 = rezervacePokoj3;
-        this.rezervaceOd = rezervaceOd;
-        this.rezervaceDo = rezervaceDo;
-        this.typeOfVacation = typeOfVacation;
-    }
+        public Booking(Room room2) {
+                this.room2 = room2;
 
-    //endregion
+        }
 
-    //region Metody
+        public Booking(Room room3, Guest firstGuest, Guest secondGuest, LocalDate bookingFrom, LocalDate bookingUntil, String typeOfVacation) {
+                this.room3 = room3;
+                this.firstGuest = firstGuest;
+                this.secondGuest = secondGuest;
+                this.bookingFrom = bookingFrom;
+                this.bookingUntil = bookingUntil;
+                this.typeOfVacation = typeOfVacation;
+        }
 
-    public String getRezervacePokoj1() {
-        return rezervacePokoj1;
-    }
+        //region Metody
+        public Room getRoom1() {
+                return room1;
+        }
 
-    public void setRezervacePokoj1(String rezervacePokoj1) {
-        this.rezervacePokoj1 = rezervacePokoj1;
-    }
+        public void setRoom1(Room room1) {
+                this.room1 = room1;
+        }
 
-    public String getRezervacePokoj2() {
-        return rezervacePokoj2;
-    }
+        public Room getRoom2() {
+                return room2;
+        }
 
-    public void setRezervacePokoj2(String rezervacePokoj2) {
-        this.rezervacePokoj2 = rezervacePokoj2;
-    }
+        public void setRoom2(Room room2) {
+                this.room2 = room2;
+        }
 
-    public String getRezervacePokoj3() {
-        return rezervacePokoj3;
-    }
+        public Room getRoom3() {
+                return room3;
+        }
 
-    public void setRezervacePokoj3(String rezervacePokoj3) {
-        this.rezervacePokoj3 = rezervacePokoj3;
-    }
+        public void setRoom3(Room room3) {
+                this.room3 = room3;
+        }
 
-    public LocalDate getRezervaceOd() {
-        return rezervaceOd;
-    }
+        public Guest getFirstGuest() {
+                return firstGuest;
+        }
 
-    public void setRezervaceOd(LocalDate rezervaceOd) {
-        this.rezervaceOd = rezervaceOd;
-    }
+        public void setFirstGuest(Guest firstGuest) {
+                this.firstGuest = firstGuest;
+        }
 
-    public LocalDate getRezervaceDo() {
-        return rezervaceDo;
-    }
+        public Guest getSecondGuest() {
+                return secondGuest;
+        }
 
-    public void setRezervaceDo(LocalDate rezervaceDo) {
-        this.rezervaceDo = rezervaceDo;
-    }
+        public void setSecondGuest(Guest secondGuest) {
+                this.secondGuest = secondGuest;
+        }
 
-    public String getTypeOfVacation() {
-        return typeOfVacation;
-    }
+        public List<Guest> getListOfBooking() {
+                return listOfBooking;
+        }
 
-    public void setTypeOfVacation(String typeOfVacation) {
-        this.typeOfVacation = typeOfVacation;
-    }
+        public void setListOfBooking(List<Guest> listOfBooking) {
+                this.listOfBooking = listOfBooking;
+        }
 
+        public LocalDate getBookingFrom() {
+                return bookingFrom;
+        }
 
-    //endregion
+        public void setBookingFrom(LocalDate bookingFrom) {
+                this.bookingFrom = bookingFrom;
+        }
+
+        public LocalDate getBookingUntil() {
+                return bookingUntil;
+        }
+
+        public void setBookingUntil(LocalDate bookingUntil) {
+                this.bookingUntil = bookingUntil;
+        }
+
+        public String getTypeOfVacation() {
+                return typeOfVacation;
+        }
+
+        public void setTypeOfVacation(String typeOfVacation) {
+                this.typeOfVacation = typeOfVacation;
+        }
+        //endregion
+
 }
 
 

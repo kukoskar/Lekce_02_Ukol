@@ -1,29 +1,29 @@
 package com.engeto.examples;
 
-public class RoomTrojluzko {
-    //region Konstruktory
-    int cisloPokoje;
-    int pocetLuzek = 3;
-    String balkon = "ne";
-    String vyhledNaMore = "ano";
-    int cenaZaTrojluzko = 2400;
+public class Room {
 
-    public RoomTrojluzko(int cisloPokoje) {
-        this.cisloPokoje = cisloPokoje;
-    }
+    private int cisloPokoje;
+    private int pocetLuzek;
+    private int cenaZaNoc;
+    private String balkon;
+    private String vyhledNaMore;
 
-    public RoomTrojluzko(int cisloPokoje, int pocetLuzek, String balkon, String vyhledNaMore, int cenaZaTrojluzko) {
+    public Room(int cisloPokoje, int pocetLuzek, int cenaZaNoc, String balkon, String vyhledNaMore) {
         this.cisloPokoje = cisloPokoje;
         this.pocetLuzek = pocetLuzek;
+        this.cenaZaNoc = cenaZaNoc;
         this.balkon = balkon;
         this.vyhledNaMore = vyhledNaMore;
-        this.cenaZaTrojluzko = cenaZaTrojluzko;
+
+    }
+    public Room(int cisloPokoje, int pocetLuzek) {
+        this(cisloPokoje, pocetLuzek, 1000, "s balkonem", "a s výhledem na moře");
+    }
+    public Room() {
     }
 
-    //endregion
 
     //region Metody
-
     public int getCisloPokoje() {
         return cisloPokoje;
     }
@@ -38,6 +38,14 @@ public class RoomTrojluzko {
 
     public void setPocetLuzek(int pocetLuzek) {
         this.pocetLuzek = pocetLuzek;
+    }
+
+    public int getCenaZaNoc() {
+        return cenaZaNoc;
+    }
+
+    public void setCenaZaNoc(int cenaZaNoc) {
+        this.cenaZaNoc = cenaZaNoc;
     }
 
     public String getBalkon() {
@@ -55,15 +63,6 @@ public class RoomTrojluzko {
     public void setVyhledNaMore(String vyhledNaMore) {
         this.vyhledNaMore = vyhledNaMore;
     }
-
-    public int getCenaZaTrojluzko() {
-        return cenaZaTrojluzko;
-    }
-
-    public void setCenaZaTrojluzko(int cenaZaTrojluzko) {
-        this.cenaZaTrojluzko = cenaZaTrojluzko;
-    }
-
-
     //endregion
+
 }
